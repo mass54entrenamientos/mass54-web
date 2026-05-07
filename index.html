@@ -529,30 +529,23 @@ section { padding: 100px 5%; }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-  background: var(--border);
-  border-radius: 16px;
-  overflow: hidden;
+  gap: 48px 64px;
 }
 .service-card {
-  background: var(--surface);
-  padding: 40px 36px;
+  background: transparent;
+  padding: 32px 0;
   position: relative;
-  transition: background 0.3s;
+  border-top: 2px solid var(--border);
+  transition: border-color 0.3s;
   overflow: hidden;
 }
-.service-card:hover { background: var(--surface2); }
-.service-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--blue);
-  transform: scaleX(0);
-  transition: transform 0.3s;
-  transform-origin: left;
+.service-card:hover { border-top-color: var(--blue); }
+.service-card.full-center {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 32px);
+  margin: 0 auto;
+  width: 100%;
 }
-.service-card:hover::after { transform: scaleX(1); }
 .service-icon {
   width: 52px; height: 52px;
   background: var(--blue-dim);
@@ -943,7 +936,8 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .nosotros-grid, .metodo-grid, .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; gap: 0; }
+  .service-card.full-center { max-width: 100%; }
   .testimonios-grid { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
   .form-row { grid-template-columns: 1fr; }
@@ -1415,7 +1409,7 @@ footer {
         <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv2-title">Salud</h3>
         <p data-t="srv2-desc">Planificaciones individualizadas enfocadas en mejorar fuerza, movilidad, composición corporal y hábitos sostenibles a largo plazo.</p>
       </div>
-      <div class="service-card reveal reveal-delay-2">
+      <div class="service-card full-center reveal reveal-delay-2">
         <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv3-title">Orientación Nutricional</h3>
         <p data-t="srv3-desc">Estrategias nutricionales adaptadas a las necesidades y objetivos individuales para complementar el proceso de entrenamiento.</p>
       </div>
