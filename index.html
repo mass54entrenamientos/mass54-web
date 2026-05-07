@@ -1154,7 +1154,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 .pricing-card {
   background: var(--surface);
@@ -1200,11 +1200,12 @@ footer {
 }
 .pricing-badge {
   font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--blue);
   margin-bottom: 20px;
+  text-align: center;
 }
 .pricing-price {
   display: flex;
@@ -1240,7 +1241,16 @@ footer {
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.5;
-  padding-left: 4px;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pricing-features li::before {
+  content: "✦";
+  color: #a07830;
+  flex-shrink: 0;
+  line-height: 1.5;
 }
 .pricing-featured .pricing-features li {
   color: rgba(255,255,255,0.8);
@@ -1478,11 +1488,11 @@ footer {
         <div class="pricing-badge" data-t="plan1-badge">HEALTH</div>
         <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan1-desc">Para personas que buscan una planificación estructurada y seguimiento profesional.</p>
         <ul class="pricing-features">
-          <li data-t="plan1-f1">✦ Evaluación inicial</li>
-          <li data-t="plan1-f2">✦ Planificación individualizada</li>
-          <li data-t="plan1-f3">✦ Seguimiento mensual</li>
-          <li data-t="plan1-f4">✦ Ajustes progresivos</li>
-          <li data-t="plan1-f5">✦ Orientación nutricional general</li>
+          <li data-t="plan1-f1">Evaluación inicial</li>
+          <li data-t="plan1-f2">Planificación individualizada</li>
+          <li data-t="plan1-f3">Seguimiento mensual</li>
+          <li data-t="plan1-f4">Ajustes progresivos</li>
+          <li data-t="plan1-f5">Orientación nutricional general</li>
         </ul>
         <a href="STRIPE_LINK_PLAN1" target="_blank" class="pricing-btn" data-t="pricing-cta">
           Empezar ahora
@@ -1496,11 +1506,11 @@ footer {
         <div class="pricing-badge" data-t="plan2-badge">PERFORMANCE</div>
         <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan2-desc">Mayor nivel de seguimiento y control para optimizar rendimiento y progresión.</p>
         <ul class="pricing-features">
-          <li data-t="plan2-f1">✦ Todo lo incluido en HEALTH</li>
-          <li data-t="plan2-f2">✦ Seguimiento semanal</li>
-          <li data-t="plan2-f3">✦ Evaluaciones mensuales</li>
-          <li data-t="plan2-f4">✦ Seguimiento nutricional</li>
-          <li data-t="plan2-f5">✦ Análisis técnicos mediante videos</li>
+          <li data-t="plan2-f1">Todo lo incluido en HEALTH</li>
+          <li data-t="plan2-f2">Seguimiento semanal</li>
+          <li data-t="plan2-f3">Evaluaciones mensuales</li>
+          <li data-t="plan2-f4">Seguimiento nutricional</li>
+          <li data-t="plan2-f5">Análisis técnicos mediante videos</li>
         </ul>
         <a href="STRIPE_LINK_PLAN2" target="_blank" class="pricing-btn pricing-btn-featured" data-t="pricing-cta2">
           Empezar ahora
@@ -1513,10 +1523,10 @@ footer {
         <div class="pricing-badge" data-t="plan3-badge">HIGH PERFORMANCE</div>
         <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan3-desc">Acompañamiento integral con seguimiento personalizado y control constante del proceso. Recomendado especialmente para deportistas en desarrollo y personas que buscan un nivel más avanzado de seguimiento y optimización.</p>
         <ul class="pricing-features">
-          <li data-t="plan3-f1">✦ Todo lo incluido en Performance</li>
-          <li data-t="plan3-f2">✦ Coordinación de sesiones online en directo para seguimiento y feedback técnico</li>
-          <li data-t="plan3-f3">✦ Ajustes individualizados constantes</li>
-          <li data-t="plan3-f4">✦ Estrategia nutricional personalizada</li>
+          <li data-t="plan3-f1">Todo lo incluido en Performance</li>
+          <li data-t="plan3-f2">Coordinación de sesiones online en directo para seguimiento y feedback técnico</li>
+          <li data-t="plan3-f3">Ajustes individualizados constantes</li>
+          <li data-t="plan3-f4">Estrategia nutricional personalizada</li>
         </ul>
         <a href="STRIPE_LINK_PLAN3" target="_blank" class="pricing-btn" data-t="pricing-cta3">
           Empezar ahora
@@ -1696,20 +1706,20 @@ const translations = {
     'plan1-desc': 'Para personas que buscan una planificación estructurada y seguimiento profesional.',
     'plan2-desc': 'Mayor nivel de seguimiento y control para optimizar rendimiento y progresión.',
     'plan3-desc': 'Acompañamiento integral con seguimiento personalizado y control constante del proceso. Recomendado especialmente para deportistas en desarrollo y personas que buscan un nivel más avanzado de seguimiento y optimización.',
-    'plan1-f1': '✦ Evaluación inicial',
-    'plan1-f2': '✦ Planificación individualizada',
-    'plan1-f3': '✦ Seguimiento mensual',
-    'plan1-f4': '✦ Ajustes progresivos',
-    'plan1-f5': '✦ Orientación nutricional general',
-    'plan2-f1': '✦ Todo lo incluido en HEALTH',
-    'plan2-f2': '✦ Seguimiento semanal',
-    'plan2-f3': '✦ Evaluaciones mensuales',
-    'plan2-f4': '✦ Seguimiento nutricional',
-    'plan2-f5': '✦ Análisis técnicos mediante videos',
-    'plan3-f1': '✦ Todo lo incluido en Performance',
-    'plan3-f2': '✦ Coordinación de sesiones online en directo para seguimiento y feedback técnico',
-    'plan3-f3': '✦ Ajustes individualizados constantes',
-    'plan3-f4': '✦ Estrategia nutricional personalizada',
+    'plan1-f1': 'Evaluación inicial',
+    'plan1-f2': 'Planificación individualizada',
+    'plan1-f3': 'Seguimiento mensual',
+    'plan1-f4': 'Ajustes progresivos',
+    'plan1-f5': 'Orientación nutricional general',
+    'plan2-f1': 'Todo lo incluido en HEALTH',
+    'plan2-f2': 'Seguimiento semanal',
+    'plan2-f3': 'Evaluaciones mensuales',
+    'plan2-f4': 'Seguimiento nutricional',
+    'plan2-f5': 'Análisis técnicos mediante videos',
+    'plan3-f1': 'Todo lo incluido en Performance',
+    'plan3-f2': 'Coordinación de sesiones online en directo para seguimiento y feedback técnico',
+    'plan3-f3': 'Ajustes individualizados constantes',
+    'plan3-f4': 'Estrategia nutricional personalizada',
     'pricing-cta': 'Empezar ahora', 'pricing-cta2': 'Empezar ahora', 'pricing-cta3': 'Empezar ahora',
     'pricing-note': 'Completá el formulario primero',
     'pricing-note2': 'Completá el formulario primero',
@@ -1770,20 +1780,20 @@ const translations = {
     'plan1-desc': 'For people looking for a structured plan and professional follow-up.',
     'plan2-desc': 'A higher level of monitoring and control to optimize performance and progression.',
     'plan3-desc': 'Comprehensive support with personalized follow-up and constant process control. Especially recommended for developing athletes and those seeking a more advanced level of monitoring and optimization.',
-    'plan1-f1': '✦ Initial assessment',
-    'plan1-f2': '✦ Individualized planning',
-    'plan1-f3': '✦ Monthly follow-up',
-    'plan1-f4': '✦ Progressive adjustments',
-    'plan1-f5': '✦ General nutritional guidance',
-    'plan2-f1': '✦ Everything included in HEALTH',
-    'plan2-f2': '✦ Weekly follow-up',
-    'plan2-f3': '✦ Monthly evaluations',
-    'plan2-f4': '✦ Nutritional monitoring',
-    'plan2-f5': '✦ Technical analysis via video',
-    'plan3-f1': '✦ Everything included in Performance',
-    'plan3-f2': '✦ Live online session coordination for follow-up and technical feedback',
-    'plan3-f3': '✦ Constant individualized adjustments',
-    'plan3-f4': '✦ Personalized nutritional strategy',
+    'plan1-f1': 'Initial assessment',
+    'plan1-f2': 'Individualized planning',
+    'plan1-f3': 'Monthly follow-up',
+    'plan1-f4': 'Progressive adjustments',
+    'plan1-f5': 'General nutritional guidance',
+    'plan2-f1': 'Everything included in HEALTH',
+    'plan2-f2': 'Weekly follow-up',
+    'plan2-f3': 'Monthly evaluations',
+    'plan2-f4': 'Nutritional monitoring',
+    'plan2-f5': 'Technical analysis via video',
+    'plan3-f1': 'Everything included in Performance',
+    'plan3-f2': 'Live online session coordination for follow-up and technical feedback',
+    'plan3-f3': 'Constant individualized adjustments',
+    'plan3-f4': 'Personalized nutritional strategy',
     'pricing-cta': 'Start now', 'pricing-cta2': 'Start now', 'pricing-cta3': 'Start now',
     'pricing-note': 'Complete the form first',
     'pricing-note2': 'Complete the form first',
