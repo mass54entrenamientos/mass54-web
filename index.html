@@ -1308,7 +1308,6 @@ footer {
     <li><a href="#nosotros" data-t="nav-nosotros">Nosotros</a></li>
     <li><a href="#servicios" data-t="nav-servicios">Servicios</a></li>
     <li><a href="#metodo" data-t="nav-metodo">Método</a></li>
-    <li><a href="#testimonios" data-t="nav-resultados">Resultados</a></li>
     <li><a href="#precios" data-t="nav-precios">Precios</a></li>
   </ul>
   <div class="lang-toggle" id="langToggle">
@@ -1454,49 +1453,6 @@ footer {
             <h3 data-t="step4-title">Acompañar</h3>
             <p data-t="step4-desc">Realizar seguimiento constante y ajustar el proceso según la evolución.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section id="testimonios">
-  <div class="testimonios-header">
-    <div class="section-eyebrow reveal" data-t="eyebrow-testimonios">Resultados reales</div>
-    <h2 class="section-title reveal" data-t="title-testimonios">LO QUE DICEN<br><em>NUESTROS ALUMNOS</em></h2>
-  </div>
-  <div class="testimonios-grid">
-    <div class="testimonial reveal">
-      <div class="stars">★★★★★</div>
-      <p data-t="test1">Llevaba años yendo al gimnasio sin resultados. Con +54 en 3 meses cambié mi composición corporal más que en los últimos 4 años. El seguimiento es diferente a todo lo que había probado.</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">CM</div>
-        <div class="author-info">
-          <strong>Carlos M.</strong>
-          <span>Entrenamiento Personal · Marbella</span>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial reveal reveal-delay-1">
-      <div class="stars">★★★★★</div>
-      <p data-t="test2">La evaluación inicial me abrió los ojos. Tenía compensaciones posturales que no sabía que tenía. El trabajo fue inteligente, no solo intenso. Mi espalda lo agradeció.</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">LR</div>
-        <div class="author-info">
-          <strong>Laura R.</strong>
-          <span>Plan Online · Buenos Aires</span>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial reveal reveal-delay-2">
-      <div class="stars">★★★★★</div>
-      <p data-t="test3">El acompañamiento nutricional combinado con el entrenamiento fue clave. No solo bajé de peso, entendí cómo comer para rendir mejor. Un enfoque realmente integral.</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MG</div>
-        <div class="author-info">
-          <strong>Martina G.</strong>
-          <span>Entrenamiento + Nutrición · Marbella</span>
         </div>
       </div>
     </div>
@@ -1712,7 +1668,7 @@ const translations = {
   es: {
     // Nav
     'nav-nosotros': 'Nosotros', 'nav-servicios': 'Servicios',
-    'nav-metodo': 'Método', 'nav-resultados': 'Resultados',
+    'nav-metodo': 'Método',
     'nav-precios': 'Precios',
     'nav-cta': 'Consultá Ahora',
     // Hero
@@ -1743,11 +1699,6 @@ const translations = {
     'step3-title': 'Desarrollar', 'step3-desc': 'Construir salud, fuerza y rendimiento mediante progresión y control.',
     'step4-title': 'Acompañar', 'step4-desc': 'Realizar seguimiento constante y ajustar el proceso según la evolución.',
     // Testimonios
-    'eyebrow-testimonios': 'Resultados reales',
-    'title-testimonios': 'LO QUE DICEN<br><em>NUESTROS ALUMNOS</em>',
-    'test1': 'Llevaba años yendo al gimnasio sin resultados. Con +54 en 3 meses cambié mi composición corporal más que en los últimos 4 años. El seguimiento es diferente a todo lo que había probado.',
-    'test2': 'La evaluación inicial me abrió los ojos. Tenía compensaciones posturales que no sabía que tenía. El trabajo fue inteligente, no solo intenso. Mi espalda lo agradeció.',
-    'test3': 'El acompañamiento nutricional combinado con el entrenamiento fue clave. No solo bajé de peso, entendí cómo comer para rendir mejor. Un enfoque realmente integral.',
     // CTA
     'cta-eyebrow': 'Empezá ahora',
     'cta-title': 'TRANSFORMÁ<br><em>TU CUERPO</em>',
@@ -1789,7 +1740,7 @@ const translations = {
   en: {
     // Nav
     'nav-nosotros': 'About', 'nav-servicios': 'Services',
-    'nav-metodo': 'Method', 'nav-resultados': 'Results',
+    'nav-metodo': 'Method',
     'nav-precios': 'Pricing',
     'nav-cta': 'Consult Now',
     // Hero
@@ -1820,11 +1771,6 @@ const translations = {
     'step3-title': 'Develop', 'step3-desc': 'Build health, strength and performance through progression and control.',
     'step4-title': 'Support', 'step4-desc': 'Provide constant follow-up and adjust the process according to progress.',
     // Testimonios
-    'eyebrow-testimonios': 'Real results',
-    'title-testimonios': 'WHAT OUR<br><em>CLIENTS SAY</em>',
-    'test1': 'I had been going to the gym for years with no results. With +54 I changed my body composition in 3 months more than in the last 4 years. The follow-up is unlike anything I had tried.',
-    'test2': 'The initial assessment opened my eyes. I had postural compensations I did not know about. The work was intelligent, not just intense. My back felt the difference.',
-    'test3': 'The nutritional support combined with training was key. I not only lost weight — I understood how to eat to perform better. A truly integral approach.',
     // CTA
     'cta-eyebrow': 'Start now',
     'cta-title': 'TRANSFORM<br><em>YOUR BODY</em>',
@@ -1878,7 +1824,7 @@ function setLang(lang) {
     const key = el.getAttribute('data-t');
     if (!t[key]) return;
     // Use innerHTML for elements that contain HTML tags
-    const htmlKeys = ['title-quienes','title-servicios','title-metodo','title-testimonios',
+    const htmlKeys = ['title-quienes','title-servicios','title-metodo',
                       'cta-title','hero-sub','nos-p1','nos-p2','nos-p3','nos-p4',
                       'pricing-title'];
     if (htmlKeys.includes(key)) {
