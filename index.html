@@ -599,17 +599,19 @@ section { padding: 100px 5%; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=80');
+  background-image: url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=1400&q=80');
   background-size: cover;
-  background-position: center left;
-  opacity: 0.055;
+  background-position: center center;
+  opacity: 0.09;
   filter: grayscale(1);
   z-index: 0;
 }
 .metodo-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 .metodo-header { margin-bottom: 64px; }
 .steps-list {
-  display: flex; flex-direction: column; gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
 }
 .step {
   display: grid;
@@ -936,6 +938,7 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
   .nosotros-grid, .metodo-grid, .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
+  .steps-list { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; gap: 0; }
   .service-card.full-center { max-width: 100%; }
   .testimonios-grid { grid-template-columns: 1fr; }
@@ -1423,7 +1426,7 @@ footer {
     <div>
       <div class="section-eyebrow reveal" data-t="eyebrow-metodo">Cómo trabajamos</div>
       <h2 class="section-title reveal" data-t="title-metodo">EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em></h2>
-      <div class="steps-list" style="margin-top:40px; max-width:720px;">
+      <div class="steps-list" style="margin-top:40px;">
         <div class="step reveal">
           <div class="step-num">01</div>
           <div class="step-content">
