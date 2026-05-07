@@ -1176,10 +1176,9 @@ footer {
   background: linear-gradient(160deg, #0d1f3c 0%, #0a1628 100%);
   border-color: rgba(30,144,255,0.5);
   box-shadow: 0 0 0 1px rgba(30,144,255,0.2), 0 20px 48px rgba(30,144,255,0.12);
-  transform: scale(1.04);
 }
 .pricing-featured:hover {
-  transform: scale(1.04) translateY(-6px);
+  transform: translateY(-6px);
   box-shadow: 0 0 0 1px rgba(30,144,255,0.4), 0 28px 56px rgba(30,144,255,0.2);
 }
 .pricing-popular {
@@ -1293,6 +1292,16 @@ footer {
   letter-spacing: 1px;
 }
 
+@media (min-width: 901px) and (max-width: 1200px) {
+  .nosotros-grid { gap: 48px; }
+  .steps-list { gap: 0 48px; }
+  .services-grid { gap: 32px 40px; }
+  .service-card.full-center { max-width: calc(50% - 20px); }
+  .pricing-card { padding: 28px 20px; }
+  .pricing-badge { font-size: 1.4rem; letter-spacing: 2px; }
+  .pricing-amount { font-size: 3.8rem; }
+  .origin-card { padding: 28px; }
+}
 @media (max-width: 900px) {
   .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
   .pricing-featured { transform: scale(1); }
