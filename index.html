@@ -1302,6 +1302,10 @@ footer {
   .pricing-amount { font-size: 3.8rem; }
   .origin-card { padding: 28px; }
 }
+@media (min-width: 1201px) {
+  section { padding: 72px 6%; }
+  .section-title { font-size: clamp(2rem, 3.5vw, 3.2rem); }
+}
 @media (max-width: 900px) {
   .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
   .pricing-featured { transform: scale(1); }
@@ -1402,7 +1406,7 @@ footer {
     </div>
     <!-- Big +54 watermark -->
     <div class="reveal reveal-delay-2" style="display:flex; align-items:center; justify-content:center; position:relative;">
-      <div style="font-family:'Bebas Neue','Barlow Condensed',sans-serif; font-size:clamp(8rem,18vw,16rem);
+      <div style="font-family:'Bebas Neue','Barlow Condensed',sans-serif; font-size:clamp(8rem,12vw,11rem);
                   font-weight:400; color:var(--blue); opacity:0.12; line-height:1;
                   text-align:center; letter-spacing:-4px; pointer-events:none; user-select:none;
                   filter:blur(1px);">
@@ -1413,7 +1417,7 @@ footer {
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" style="max-width:none; padding: 100px 5%;">
+<section id="servicios" style="max-width:none;">
   <div style="max-width:1300px; margin: 0 auto;">
     <div class="servicios-header">
       <div>
@@ -1423,11 +1427,11 @@ footer {
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
-        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv1-title">Rendimiento Deportivo y Prevención</h3>
+        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:left;margin-bottom:14px;" data-t="srv1-title">Rendimiento Deportivo y Prevención</h3>
         <p data-t="srv1-desc">Entrenamiento de fuerza y acondicionamiento físico orientado a las demandas específicas de tu deporte y prevención de lesiones.</p>
       </div>
       <div class="service-card reveal reveal-delay-1">
-        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv2-title">Salud</h3>
+        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:left;margin-bottom:14px;" data-t="srv2-title">Salud</h3>
         <p data-t="srv2-desc">Planificaciones individualizadas enfocadas en mejorar fuerza, movilidad, composición corporal y hábitos sostenibles a largo plazo.</p>
       </div>
       <div class="service-card full-center reveal reveal-delay-2">
@@ -1479,7 +1483,7 @@ footer {
 </section>
 
 <!-- PRECIOS -->
-<section id="precios" style="padding:100px 5%; background:var(--black); border-top:1px solid var(--border);">
+<section id="precios" style="background:var(--black); border-top:1px solid var(--border);">
   <div style="max-width:1100px; margin:0 auto;">
 
     <div style="text-align:center; margin-bottom:64px;">
