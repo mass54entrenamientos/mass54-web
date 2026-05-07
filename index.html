@@ -599,7 +599,7 @@ section { padding: 100px 5%; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400&q=80');
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=80');
   background-size: cover;
   background-position: center left;
   opacity: 0.055;
@@ -1420,62 +1420,36 @@ footer {
 <!-- MÉTODO -->
 <section id="metodo">
   <div class="metodo-inner">
-    <div class="metodo-grid">
-      <div>
-        <div class="section-eyebrow reveal" data-t="eyebrow-metodo">Cómo trabajamos</div>
-        <h2 class="section-title reveal" data-t="title-metodo">EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em></h2>
-        <div class="steps-list" style="margin-top:40px;">
-          <div class="step reveal">
-            <div class="step-num">01</div>
-            <div class="step-content">
-              <h3 data-t="step1-title">Evaluación Inicial</h3>
-              <p data-t="step1-desc">Analizamos tu historial, objetivos, movimiento y composición corporal. Sin esta base, cualquier plan es una suposición.</p>
-            </div>
-          </div>
-          <div class="step reveal reveal-delay-1">
-            <div class="step-num">02</div>
-            <div class="step-content">
-              <h3 data-t="step2-title">Plan Personalizado</h3>
-              <p data-t="step2-desc">Diseñamos tu programa específico: periodización, intensidades, volumen y progresiones adaptadas a tu realidad.</p>
-            </div>
-          </div>
-          <div class="step reveal reveal-delay-2">
-            <div class="step-num">03</div>
-            <div class="step-content">
-              <h3 data-t="step3-title">Ejecución y Coaching</h3>
-              <p data-t="step3-desc">Entrenamos juntos con foco en técnica, esfuerzo real y progreso constante. Cada sesión tiene un propósito.</p>
-            </div>
-          </div>
-          <div class="step reveal reveal-delay-3">
-            <div class="step-num">04</div>
-            <div class="step-content">
-              <h3 data-t="step4-title">Seguimiento y Ajuste</h3>
-              <p data-t="step4-desc">Medimos, evaluamos y ajustamos. Tu cuerpo cambia y tu plan también. Sin estancamiento.</p>
-            </div>
+    <div>
+      <div class="section-eyebrow reveal" data-t="eyebrow-metodo">Cómo trabajamos</div>
+      <h2 class="section-title reveal" data-t="title-metodo">EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em></h2>
+      <div class="steps-list" style="margin-top:40px; max-width:720px;">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3 data-t="step1-title">Evaluar</h3>
+            <p data-t="step1-desc">Comprender objetivos, necesidades y capacidades individuales.</p>
           </div>
         </div>
-      </div>
-      <div>
-        <div class="pillars">
-          <div class="pillar reveal">
-            <h4 data-t="pillar-p1-title">Fuerza</h4>
-            <p data-t="pillar-p1-desc">Base estructural de todo el trabajo físico</p>
+        <div class="step reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3 data-t="step2-title">Planificar</h3>
+            <p data-t="step2-desc">Diseñar un proceso estructurado y adaptado a cada persona.</p>
           </div>
-          <div class="pillar reveal reveal-delay-1">
-            <h4 data-t="pillar-p2-title">Potencia</h4>
-            <p data-t="pillar-p2-desc">Velocidad de ejecución y rendimiento</p>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3 data-t="step3-title">Desarrollar</h3>
+            <p data-t="step3-desc">Construir salud, fuerza y rendimiento mediante progresión y control.</p>
           </div>
-          <div class="pillar reveal reveal-delay-2">
-            <h4 data-t="pillar-p3-title">Movilidad</h4>
-            <p data-t="pillar-p3-desc">Rango de movimiento funcional y sin dolor</p>
-          </div>
-          <div class="pillar reveal reveal-delay-3">
-            <h4 data-t="pillar-p4-title">Cardio</h4>
-            <p data-t="pillar-p4-desc">Resistencia cardiovascular y metabólica</p>
-          </div>
-          <div class="pillar reveal" style="grid-column: 1/-1;">
-            <h4 data-t="pillar-p5-title">Composición Corporal</h4>
-            <p data-t="pillar-p5-desc">El resultado visible de todos los pilares trabajados de forma integrada</p>
+        </div>
+        <div class="step reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3 data-t="step4-title">Acompañar</h3>
+            <p data-t="step4-desc">Realizar seguimiento constante y ajustar el proceso según la evolución.</p>
           </div>
         </div>
       </div>
@@ -1761,15 +1735,10 @@ const translations = {
     // Método
     'eyebrow-metodo': 'Cómo trabajamos',
     'title-metodo': 'EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em>',
-    'step1-title': 'Evaluación Inicial', 'step1-desc': 'Analizamos tu historial, objetivos, movimiento y composición corporal. Sin esta base, cualquier plan es una suposición.',
-    'step2-title': 'Plan Personalizado', 'step2-desc': 'Diseñamos tu programa específico: periodización, intensidades, volumen y progresiones adaptadas a tu realidad.',
-    'step3-title': 'Ejecución y Coaching', 'step3-desc': 'Entrenamos juntos con foco en técnica, esfuerzo real y progreso constante. Cada sesión tiene un propósito.',
-    'step4-title': 'Seguimiento y Ajuste', 'step4-desc': 'Medimos, evaluamos y ajustamos. Tu cuerpo cambia y tu plan también. Sin estancamiento.',
-    'pillar-p1-title': 'Fuerza', 'pillar-p1-desc': 'Base estructural de todo el trabajo físico',
-    'pillar-p2-title': 'Potencia', 'pillar-p2-desc': 'Velocidad de ejecución y rendimiento',
-    'pillar-p3-title': 'Movilidad', 'pillar-p3-desc': 'Rango de movimiento funcional y sin dolor',
-    'pillar-p4-title': 'Cardio', 'pillar-p4-desc': 'Resistencia cardiovascular y metabólica',
-    'pillar-p5-title': 'Composición Corporal', 'pillar-p5-desc': 'El resultado visible de todos los pilares trabajados de forma integrada',
+    'step1-title': 'Evaluar', 'step1-desc': 'Comprender objetivos, necesidades y capacidades individuales.',
+    'step2-title': 'Planificar', 'step2-desc': 'Diseñar un proceso estructurado y adaptado a cada persona.',
+    'step3-title': 'Desarrollar', 'step3-desc': 'Construir salud, fuerza y rendimiento mediante progresión y control.',
+    'step4-title': 'Acompañar', 'step4-desc': 'Realizar seguimiento constante y ajustar el proceso según la evolución.',
     // Testimonios
     'eyebrow-testimonios': 'Resultados reales',
     'title-testimonios': 'LO QUE DICEN<br><em>NUESTROS ALUMNOS</em>',
@@ -1843,15 +1812,10 @@ const translations = {
     // Método
     'eyebrow-metodo': 'How we work',
     'title-metodo': 'THE METHOD<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em>',
-    'step1-title': 'Initial Assessment', 'step1-desc': 'We analyze your history, goals, movement and body composition. Without this foundation, any plan is just a guess.',
-    'step2-title': 'Personalized Plan', 'step2-desc': 'We design your specific program: periodization, intensities, volume and progressions adapted to your reality.',
-    'step3-title': 'Execution & Coaching', 'step3-desc': 'We train together with focus on technique, real effort and constant progress. Every session has a purpose.',
-    'step4-title': 'Tracking & Adjustment', 'step4-desc': 'We measure, evaluate and adjust. Your body changes and your plan changes too. No plateaus.',
-    'pillar-p1-title': 'Strength', 'pillar-p1-desc': 'Structural foundation of all physical work',
-    'pillar-p2-title': 'Power', 'pillar-p2-desc': 'Execution speed and performance',
-    'pillar-p3-title': 'Mobility', 'pillar-p3-desc': 'Functional range of motion, pain-free',
-    'pillar-p4-title': 'Cardio', 'pillar-p4-desc': 'Cardiovascular and metabolic endurance',
-    'pillar-p5-title': 'Body Composition', 'pillar-p5-desc': 'The visible result of all pillars working together',
+    'step1-title': 'Assess', 'step1-desc': 'Understand individual goals, needs and capabilities.',
+    'step2-title': 'Plan', 'step2-desc': 'Design a structured process adapted to each person.',
+    'step3-title': 'Develop', 'step3-desc': 'Build health, strength and performance through progression and control.',
+    'step4-title': 'Support', 'step4-desc': 'Provide constant follow-up and adjust the process according to progress.',
     // Testimonios
     'eyebrow-testimonios': 'Real results',
     'title-testimonios': 'WHAT OUR<br><em>CLIENTS SAY</em>',
