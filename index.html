@@ -1336,7 +1336,7 @@ footer {
 }
 .entrenador-photo-placeholder {
   width: 100%;
-  aspect-ratio: 3/4;
+  height: 260px;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -1348,6 +1348,16 @@ footer {
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+  overflow: hidden;
+}
+.entrenador-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  .entrenador-bottom-grid { grid-template-columns: 1fr; gap: 0; }
 }
 .entrenador-stats {
   display: grid;
@@ -1668,7 +1678,7 @@ footer {
               <div class="exp-role">Preparador Físico — 1ª División</div>
               <div class="exp-club">Club Rincón del Atuel</div>
               <div class="exp-period">Dic 2019 – Dic 2020</div>
-              <div class="exp-desc">Preparación física en la Liga Departamental "A" con foco en movimiento funcional y prevención de lesiones.</div>
+              <div class="exp-desc">A cargo de la preparación física del equipo de primera en la Liga Departamental "A". Sesiones de campo y gimnasio con foco en movimiento funcional, acondicionamiento y prevención de lesiones.</div>
             </div>
           </div>
           <div class="exp-item">
@@ -1683,9 +1693,8 @@ footer {
         </div>
       </div>
 
-      <!-- Derecha: foto + habilidades + logros + formación -->
+      <!-- Derecha: foto + habilidades -->
       <div>
-        <!-- Placeholder imagen — se reemplaza con las fotos cuando las envíes -->
         <div class="entrenador-photo-placeholder reveal">Foto próximamente</div>
 
         <div class="entrenador-section-title reveal">Habilidades Técnicas</div>
@@ -1695,7 +1704,12 @@ footer {
           <div class="skill-tag">Pliometría &amp; Velocidad</div>
           <div class="skill-tag">Acondicionamiento Físico</div>
         </div>
+      </div>
+    </div>
 
+    <!-- Logros y Formación en dos columnas -->
+    <div class="entrenador-bottom-grid">
+      <div>
         <div class="entrenador-section-title reveal">Logros Destacados</div>
         <div class="entrenador-achievements reveal">
           <div class="achievement-item"><span class="achievement-icon">🏆</span> Campeón Clausura 2021 — Club Maristas · Liga Provincial "A"</div>
@@ -1705,7 +1719,8 @@ footer {
           <div class="achievement-item"><span class="achievement-icon">🎓</span> Diploma — Barça Innovation Hub · FC Barcelona</div>
           <div class="achievement-item"><span class="achievement-icon">🌍</span> Doble Nacionalidad Argentina–Italiana</div>
         </div>
-
+      </div>
+      <div>
         <div class="entrenador-section-title reveal">Formación</div>
         <div class="entrenador-formacion reveal">
           <div class="formacion-item">
