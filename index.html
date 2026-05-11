@@ -1312,6 +1312,228 @@ footer {
   .pricing-featured:hover { transform: translateY(-6px); }
 }
 
+
+/* ─── TU ENTRENADOR ────────────────────────────── */
+#entrenador {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.entrenador-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.entrenador-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 48px;
+}
+.entrenador-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.entrenador-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+.entrenador-stat {
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+.entrenador-stat:hover { border-color: rgba(30,144,255,0.4); }
+.entrenador-stat-num {
+  font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  color: var(--blue);
+  line-height: 1;
+}
+.entrenador-stat-label {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.entrenador-name {
+  font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(160deg, #ffffff 30%, rgba(180,210,255,0.85) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.entrenador-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+.entrenador-bio {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+.entrenador-exp {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 8px;
+}
+.exp-item {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.exp-item:last-child { border-bottom: none; }
+.exp-line {
+  background: linear-gradient(to bottom, var(--blue) 0%, transparent 100%);
+  border-radius: 2px;
+  width: 3px;
+  align-self: stretch;
+  min-height: 16px;
+}
+.exp-role {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.exp-club {
+  font-size: 0.82rem;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+.exp-period {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.exp-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.entrenador-section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 14px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.entrenador-section-title::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--blue);
+}
+.entrenador-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.skill-tag {
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  transition: border-color 0.3s, color 0.3s;
+}
+.skill-tag:hover { border-color: rgba(30,144,255,0.4); color: var(--blue); }
+.entrenador-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.achievement-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.entrenador-formacion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formacion-item {
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.formacion-titulo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.formacion-inst {
+  font-size: 0.78rem;
+  color: var(--blue);
+}
+@media (max-width: 900px) {
+  .entrenador-grid { grid-template-columns: 1fr; gap: 40px; }
+  .entrenador-skills { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1328,9 +1550,9 @@ footer {
          style="height:52px; width:auto; filter:drop-shadow(0 0 8px rgba(30,144,255,0.4));">
   </a>
   <ul class="nav-links">
-    <li><a href="#nosotros" data-t="nav-nosotros">Nosotros</a></li>
-    <li><a href="#servicios" data-t="nav-servicios">Servicios</a></li>
+    <li><a href="#entrenador" data-t="nav-entrenador">Tu Entrenador</a></li>
     <li><a href="#metodo" data-t="nav-metodo">Método</a></li>
+    <li><a href="#servicios" data-t="nav-servicios">Servicios</a></li>
     <li><a href="#precios" data-t="nav-precios">Precios</a></li>
   </ul>
   <div class="lang-toggle" id="langToggle">
@@ -1393,24 +1615,157 @@ footer {
   </div>
 </section>
 
-<!-- NOSOTROS -->
-<section id="nosotros">
-  <div class="nosotros-grid">
-    <div class="nosotros-text reveal">
-      <div class="section-eyebrow" data-t="eyebrow-quienes">Quiénes somos</div>
-      <h2 class="section-title" data-t="title-quienes">NUESTRA<br><em>METODOLOGÍA</em></h2>
-      <p data-t="nos-p1">MASS54 nace de una visión clara: el entrenamiento debe ser individualizado, estructurado y sostenible.</p>
-      <p data-t="nos-p2">Cada proceso comienza con una evaluación funcional completa que nos permite diseñar una planificación adaptada a las necesidades, objetivos y capacidades de cada persona.</p>
-      <p data-t="nos-p3">A través del entrenamiento, la orientación nutricional y el seguimiento constante, buscamos desarrollar salud, fuerza y rendimiento a largo plazo.</p>
-      <p data-t="nos-p4">No creemos en soluciones rápidas ni en métodos genéricos. Creemos en el trabajo bien hecho, la progresión y la constancia.</p>
+<!-- TU ENTRENADOR -->
+<section id="entrenador">
+  <div class="entrenador-inner">
+    <div class="section-eyebrow reveal">Tu Entrenador</div>
+    <h2 class="entrenador-name reveal">LUCIANO<br>GARIBALDI</h2>
+    <p class="entrenador-role reveal">Strength &amp; Conditioning Coach &nbsp;·&nbsp; Preparador Físico &nbsp;·&nbsp; Founder — Sport Fitness RC</p>
+
+    <div class="entrenador-grid">
+      <!-- Izquierda: info -->
+      <div>
+        <p class="entrenador-bio reveal">Más de 5 años transformando atletas a través de métodos basados en evidencia. Especializado en fuerza, movilidad y prevención de lesiones, trabajando desde población general hasta deportistas semiprofesionales.</p>
+
+        <div class="entrenador-stats reveal">
+          <div class="entrenador-stat">
+            <div class="entrenador-stat-num">5+</div>
+            <div class="entrenador-stat-label">Años de experiencia</div>
+          </div>
+          <div class="entrenador-stat">
+            <div class="entrenador-stat-num">3</div>
+            <div class="entrenador-stat-label">Campeonatos</div>
+          </div>
+          <div class="entrenador-stat">
+            <div class="entrenador-stat-num">4</div>
+            <div class="entrenador-stat-label">Clubes</div>
+          </div>
+        </div>
+
+        <div class="entrenador-section-title reveal">Experiencia</div>
+        <div class="entrenador-exp reveal">
+          <div class="exp-item">
+            <div class="exp-line"></div>
+            <div>
+              <div class="exp-role">Fundador &amp; Head Coach</div>
+              <div class="exp-club">Sport Fitness RC · Mendoza</div>
+              <div class="exp-period">2020 – Presente</div>
+              <div class="exp-desc">Fundó y dirige un centro de entrenamiento físico funcional. Diseña y ejecuta programas individuales y grupales centrados en fuerza, movilidad y prevención de lesiones.</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-line"></div>
+            <div>
+              <div class="exp-role">Preparador Físico — 1ª División</div>
+              <div class="exp-club">Club Maristas · San Rafael</div>
+              <div class="exp-period">Sep 2021 – Dic 2022</div>
+              <div class="exp-desc">Programas individualizados para el equipo de primera en la Liga Provincial "A". Temporada coronada con tres títulos regionales.</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-line"></div>
+            <div>
+              <div class="exp-role">Preparador Físico — 1ª División</div>
+              <div class="exp-club">Club Rincón del Atuel</div>
+              <div class="exp-period">Dic 2019 – Dic 2020</div>
+              <div class="exp-desc">Preparación física en la Liga Departamental "A" con foco en movimiento funcional y prevención de lesiones.</div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-line"></div>
+            <div>
+              <div class="exp-role">Entrenador — Categorías Juveniles</div>
+              <div class="exp-club">Club Atlético Pilares</div>
+              <div class="exp-period">Mar 2016 – Dic 2017</div>
+              <div class="exp-desc">Entrenó categorías juveniles con énfasis en movimiento fundamental y desarrollo físico a largo plazo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Derecha: foto + habilidades + logros + formación -->
+      <div>
+        <!-- Placeholder imagen — se reemplaza con las fotos cuando las envíes -->
+        <div class="entrenador-photo-placeholder reveal">Foto próximamente</div>
+
+        <div class="entrenador-section-title reveal">Habilidades Técnicas</div>
+        <div class="entrenador-skills reveal">
+          <div class="skill-tag">Fuerza &amp; Potencia</div>
+          <div class="skill-tag">Prevención de Lesiones</div>
+          <div class="skill-tag">Pliometría &amp; Velocidad</div>
+          <div class="skill-tag">Acondicionamiento Físico</div>
+        </div>
+
+        <div class="entrenador-section-title reveal">Logros Destacados</div>
+        <div class="entrenador-achievements reveal">
+          <div class="achievement-item"><span class="achievement-icon">🏆</span> Campeón Clausura 2021 — Club Maristas · Liga Provincial "A"</div>
+          <div class="achievement-item"><span class="achievement-icon">🏆</span> Campeón Apertura 2022 — Club Maristas · Liga Provincial "A"</div>
+          <div class="achievement-item"><span class="achievement-icon">🏆</span> Campeón Liga Regional "B" 2022 — Club Maristas · Mendoza</div>
+          <div class="achievement-item"><span class="achievement-icon">🏢</span> Fundador de Sport Fitness RC · activo desde 2020</div>
+          <div class="achievement-item"><span class="achievement-icon">🎓</span> Diploma — Barça Innovation Hub · FC Barcelona</div>
+          <div class="achievement-item"><span class="achievement-icon">🌍</span> Doble Nacionalidad Argentina–Italiana</div>
+        </div>
+
+        <div class="entrenador-section-title reveal">Formación</div>
+        <div class="entrenador-formacion reveal">
+          <div class="formacion-item">
+            <div class="formacion-titulo">Profesor Nacional de Educación Física</div>
+            <div class="formacion-inst">Instituto de Educación Física 9.016 "Jorge E. Coll" · Mendoza, Argentina</div>
+          </div>
+          <div class="formacion-item">
+            <div class="formacion-titulo">Diploma en Entrenamiento Físico</div>
+            <div class="formacion-inst">Barça Innovation Hub · FC Barcelona · Formación internacional</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Big +54 watermark -->
-    <div class="reveal reveal-delay-2" style="display:flex; align-items:center; justify-content:center; position:relative;">
-      <div style="font-family:'Bebas Neue','Barlow Condensed',sans-serif; font-size:clamp(8rem,12vw,11rem);
-                  font-weight:400; color:var(--blue); opacity:0.12; line-height:1;
-                  text-align:center; letter-spacing:-4px; pointer-events:none; user-select:none;
-                  filter:blur(1px);">
-        +54
+  </div>
+</section>
+
+<!-- MÉTODO (fusión de Quiénes somos + Cómo trabajamos) -->
+<section id="metodo">
+  <div class="metodo-inner">
+    <div class="metodo-grid">
+      <div>
+        <div class="section-eyebrow reveal" data-t="eyebrow-metodo">Nuestro Método</div>
+        <h2 class="section-title reveal" data-t="title-metodo">NUESTRO<br><em>MÉTODO</em></h2>
+        <p style="color:var(--muted);line-height:1.8;font-size:1rem;margin-top:24px;" data-t="nos-p1">MASS54 nace de una visión clara: el entrenamiento debe ser individualizado, estructurado y sostenible.</p>
+        <p style="color:var(--muted);line-height:1.8;font-size:1rem;margin-top:16px;" data-t="nos-p2">Cada proceso comienza con una evaluación funcional completa que nos permite diseñar una planificación adaptada a las necesidades, objetivos y capacidades de cada persona.</p>
+        <p style="color:var(--muted);line-height:1.8;font-size:1rem;margin-top:16px;" data-t="nos-p3">A través del entrenamiento, la orientación nutricional y el seguimiento constante, buscamos desarrollar salud, fuerza y rendimiento a largo plazo.</p>
+        <p style="color:var(--muted);line-height:1.8;font-size:1rem;margin-top:16px;" data-t="nos-p4">No creemos en soluciones rápidas ni en métodos genéricos. Creemos en el trabajo bien hecho, la progresión y la constancia.</p>
+      </div>
+      <div>
+        <div class="section-eyebrow reveal" style="margin-bottom:32px;">Cómo Trabajamos</div>
+        <div class="steps-list" style="margin-top:0;">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3 data-t="step1-title">Evaluar</h3>
+              <p data-t="step1-desc">Comprender objetivos, necesidades y capacidades individuales.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3 data-t="step2-title">Planificar</h3>
+              <p data-t="step2-desc">Diseñar un proceso estructurado y adaptado a cada persona.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3 data-t="step3-title">Desarrollar</h3>
+              <p data-t="step3-desc">Construir salud, fuerza y rendimiento mediante progresión y control.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3 data-t="step4-title">Acompañar</h3>
+              <p data-t="step4-desc">Realizar seguimiento constante y ajustar el proceso según la evolución.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1437,46 +1792,6 @@ footer {
       <div class="service-card full-center reveal reveal-delay-2">
         <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv3-title">Seguimiento Nutricional</h3>
         <p data-t="srv3-desc">Estrategias nutricionales adaptadas a las necesidades y objetivos individuales para complementar el proceso de entrenamiento.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MÉTODO -->
-<section id="metodo">
-  <div class="metodo-inner">
-    <div>
-      <div class="section-eyebrow reveal" data-t="eyebrow-metodo">Cómo trabajamos</div>
-      <h2 class="section-title reveal" data-t="title-metodo">EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em></h2>
-      <div class="steps-list" style="margin-top:40px;">
-        <div class="step reveal">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3 data-t="step1-title">Evaluar</h3>
-            <p data-t="step1-desc">Comprender objetivos, necesidades y capacidades individuales.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-delay-1">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3 data-t="step2-title">Planificar</h3>
-            <p data-t="step2-desc">Diseñar un proceso estructurado y adaptado a cada persona.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-delay-2">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3 data-t="step3-title">Desarrollar</h3>
-            <p data-t="step3-desc">Construir salud, fuerza y rendimiento mediante progresión y control.</p>
-          </div>
-        </div>
-        <div class="step reveal reveal-delay-3">
-          <div class="step-num">04</div>
-          <div class="step-content">
-            <h3 data-t="step4-title">Acompañar</h3>
-            <p data-t="step4-desc">Realizar seguimiento constante y ajustar el proceso según la evolución.</p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1608,9 +1923,9 @@ footer {
   <div class="footer-inner">
     <div class="footer-logo"><span>+</span>54 <span data-t="footer-brand">Entrenamiento Físico Integral</span></div>
     <ul class="footer-links">
-      <li><a href="#nosotros" data-t="nav-nosotros">Nosotros</a></li>
-      <li><a href="#servicios" data-t="nav-servicios">Servicios</a></li>
+      <li><a href="#entrenador" data-t="nav-entrenador">Tu Entrenador</a></li>
       <li><a href="#metodo" data-t="nav-metodo">Método</a></li>
+      <li><a href="#servicios" data-t="nav-servicios">Servicios</a></li>
       <li><a href="#precios" data-t="nav-precios">Precios</a></li>
     </ul>
   </div>
@@ -1681,7 +1996,7 @@ function animateCounter(el, target) {
 const translations = {
   es: {
     // Nav
-    'nav-nosotros': 'Nosotros', 'nav-servicios': 'Servicios',
+    'nav-entrenador': 'Tu Entrenador', 'nav-servicios': 'Servicios',
     'nav-metodo': 'Método',
     'nav-precios': 'Precios',
     'nav-cta': 'Consultá Ahora',
@@ -1706,8 +2021,8 @@ const translations = {
     'srv3-title': 'Seguimiento Nutricional',
     'srv3-desc': 'Estrategias nutricionales adaptadas a las necesidades y objetivos individuales para complementar el proceso de entrenamiento.',
     // Método
-    'eyebrow-metodo': 'Cómo trabajamos',
-    'title-metodo': 'EL MÉTODO<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em>',
+    'eyebrow-metodo': 'Nuestro Método',
+    'title-metodo': 'NUESTRO<br><em>MÉTODO</em>',
     'step1-title': 'Evaluar', 'step1-desc': 'Comprender objetivos, necesidades y capacidades individuales.',
     'step2-title': 'Planificar', 'step2-desc': 'Diseñar un proceso estructurado y adaptado a cada persona.',
     'step3-title': 'Desarrollar', 'step3-desc': 'Construir salud, fuerza y rendimiento mediante progresión y control.',
@@ -1755,7 +2070,7 @@ const translations = {
   },
   en: {
     // Nav
-    'nav-nosotros': 'About', 'nav-servicios': 'Services',
+    'nav-entrenador': 'Your Coach', 'nav-servicios': 'Services',
     'nav-metodo': 'Method',
     'nav-precios': 'Pricing',
     'nav-cta': 'Consult Now',
@@ -1780,8 +2095,8 @@ const translations = {
     'srv3-title': 'Nutritional Monitoring',
     'srv3-desc': 'Nutritional strategies adapted to individual needs and goals to complement the training process.',
     // Método
-    'eyebrow-metodo': 'How we work',
-    'title-metodo': 'THE METHOD<br><em style="font-size:1.4em;letter-spacing:2px;">+54</em>',
+    'eyebrow-metodo': 'Our Method',
+    'title-metodo': 'OUR<br><em>METHOD</em>',
     'step1-title': 'Assess', 'step1-desc': 'Understand individual goals, needs and capabilities.',
     'step2-title': 'Plan', 'step2-desc': 'Design a structured process adapted to each person.',
     'step3-title': 'Develop', 'step3-desc': 'Build health, strength and performance through progression and control.',
