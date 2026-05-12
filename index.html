@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>+54 Entrenamiento Físico Integral · Marbella</title>
+<title>+54 Entrenamiento Físico Integral Online</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -1150,9 +1150,54 @@ footer {
 
 
 /* ─── PRICING SECTION ──────────────────────────── */
+.pricing-entry-wrapper {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+.pricing-entry {
+  max-width: 480px;
+  width: 100%;
+  background: linear-gradient(160deg, #141a10 0%, #0e1409 100%);
+  border: 1.5px solid rgba(160,120,48,0.55);
+  box-shadow: 0 0 0 1px rgba(160,120,48,0.15), 0 16px 40px rgba(0,0,0,0.25);
+}
+.pricing-entry:hover {
+  border-color: rgba(160,120,48,0.85);
+  box-shadow: 0 0 0 1px rgba(160,120,48,0.3), 0 20px 48px rgba(160,120,48,0.12);
+}
+.pricing-entry .pricing-features li::before {
+  color: #a07830;
+}
+.pricing-entry-note {
+  font-size: 0.78rem;
+  color: rgba(160,120,48,0.8);
+  text-align: center;
+  margin-top: 16px;
+  font-style: italic;
+  line-height: 1.5;
+}
+.pricing-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0 32px;
+  color: var(--muted);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.pricing-divider::before,
+.pricing-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   align-items: stretch;
 }
@@ -1310,6 +1355,7 @@ footer {
   .pricing-grid { grid-template-columns: 1fr; gap: 20px; }
   .pricing-featured { transform: scale(1); }
   .pricing-featured:hover { transform: translateY(-6px); }
+  .pricing-entry { max-width: 100%; }
 }
 
 
@@ -1822,46 +1868,54 @@ footer {
       </p>
     </div>
 
-    <div class="pricing-grid reveal">
-
-      <!-- PLAN HEALTH -->
-      <div class="pricing-card">
-        <div class="pricing-badge" data-t="plan1-badge">HEALTH</div>
+    <!-- PASO 0: PUNTO DE PARTIDA -->
+    <div class="pricing-entry-wrapper reveal">
+      <div class="pricing-card pricing-entry">
+        <div class="pricing-popular" data-t="entry-badge">Empezá aquí</div>
+        <div class="pricing-badge" data-t="entry-name">PUNTO DE PARTIDA</div>
         <div class="pricing-price">
-          <span class="pricing-amount">120</span>
-          <span class="pricing-currency">€<span data-t="pricing-mo">/mes</span></span>
+          <span class="pricing-amount">80</span>
+          <span class="pricing-currency">€&nbsp;<span data-t="entry-period" style="font-size:0.95rem;">pago único</span></span>
         </div>
-        <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan1-desc">Para personas que buscan una planificación estructurada y seguimiento profesional.</p>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="entry-desc">El primer paso para conocer tu cuerpo y empezar con el pie derecho.</p>
         <ul class="pricing-features">
-          <li data-t="plan1-f1">Evaluación inicial</li>
-          <li data-t="plan1-f2">Planificación individualizada</li>
-          <li data-t="plan1-f3">Seguimiento mensual</li>
-          <li data-t="plan1-f4">Ajustes progresivos</li>
-          <li data-t="plan1-f5">Orientación nutricional general</li>
+          <li data-t="entry-f1">Evaluación funcional completa</li>
+          <li data-t="entry-f2">Rutina de adaptación personalizada (3 semanas)</li>
+          <li data-t="entry-f3">Análisis de objetivos y capacidades</li>
+          <li data-t="entry-f4">Propuesta de planificación a largo plazo</li>
         </ul>
-        <a href="STRIPE_LINK_PLAN1" target="_blank" class="pricing-btn" data-t="pricing-cta">
+        <a href="#cta-band" class="pricing-btn" data-t="entry-cta">
           Empezar ahora
         </a>
-        <p class="pricing-note" data-t="pricing-note">Completá el formulario primero</p>
+        <p class="pricing-entry-note" data-t="entry-note">Al finalizar las 3 semanas podés continuar con un plan mensual</p>
       </div>
+    </div>
+
+    <!-- SEPARADOR PLANES MENSUALES -->
+    <div class="pricing-divider reveal">
+      <span data-t="pricing-divider-text">Planes mensuales</span>
+    </div>
+
+    <div class="pricing-grid reveal">
 
       <!-- PLAN PERFORMANCE (destacado) -->
       <div class="pricing-card pricing-featured">
         <div class="pricing-popular" data-t="popular-badge">Más elegido</div>
         <div class="pricing-badge" data-t="plan2-badge">PERFORMANCE</div>
         <div class="pricing-price">
-          <span class="pricing-amount">220</span>
+          <span class="pricing-amount">250</span>
           <span class="pricing-currency">€<span data-t="pricing-mo2">/mes</span></span>
         </div>
         <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan2-desc">Mayor nivel de seguimiento y control para optimizar rendimiento y progresión.</p>
         <ul class="pricing-features">
-          <li data-t="plan2-f1">Todo lo incluido en HEALTH</li>
+          <li data-t="plan2-f1">Todo lo incluido en el Punto de Partida</li>
+          <li data-t="plan2-f1b">Planificación mensual personalizada</li>
           <li data-t="plan2-f2">Seguimiento semanal</li>
           <li data-t="plan2-f3">Evaluaciones mensuales</li>
           <li data-t="plan2-f4">Seguimiento nutricional</li>
           <li data-t="plan2-f5">Análisis técnicos mediante videos</li>
         </ul>
-        <a href="STRIPE_LINK_PLAN2" target="_blank" class="pricing-btn pricing-btn-featured" data-t="pricing-cta2">
+        <a href="#cta-band" class="pricing-btn pricing-btn-featured" data-t="pricing-cta2">
           Empezar ahora
         </a>
         <p class="pricing-note" data-t="pricing-note2">Completá el formulario primero</p>
@@ -1871,17 +1925,17 @@ footer {
       <div class="pricing-card">
         <div class="pricing-badge" data-t="plan3-badge">HIGH PERFORMANCE</div>
         <div class="pricing-price">
-          <span class="pricing-amount">330</span>
+          <span class="pricing-amount">390</span>
           <span class="pricing-currency">€<span data-t="pricing-mo3">/mes</span></span>
         </div>
-        <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan3-desc">Para deportistas en desarrollo y atletas que buscan el mayor nivel de seguimiento, personalización y optimización continua.</p>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.6; margin:16px 0 24px;" data-t="plan3-desc">Para deportistas y atletas que buscan el mayor nivel de personalización y optimización continua.</p>
         <ul class="pricing-features">
           <li data-t="plan3-f1">Todo lo incluido en Performance</li>
-          <li data-t="plan3-f2">Coordinación de sesiones online en directo para seguimiento y feedback técnico</li>
+          <li data-t="plan3-f2">Sesiones online en directo para seguimiento y feedback técnico</li>
           <li data-t="plan3-f3">Ajustes individualizados constantes</li>
           <li data-t="plan3-f4">Estrategia nutricional personalizada</li>
         </ul>
-        <a href="STRIPE_LINK_PLAN3" target="_blank" class="pricing-btn" data-t="pricing-cta3">
+        <a href="#cta-band" class="pricing-btn" data-t="pricing-cta3">
           Empezar ahora
         </a>
         <p class="pricing-note" data-t="pricing-note3">Completá el formulario primero</p>
@@ -2054,27 +2108,32 @@ const translations = {
     // Precios
     'pricing-eyebrow': 'Planes & Precios',
     'pricing-title': 'ELEGÍ TU<br><em>PLAN</em>',
-    'pricing-sub': 'Suscripción mensual sin permanencia. Cancelás cuando querés.',
-    'plan1-badge': 'HEALTH', 'plan2-badge': 'PERFORMANCE', 'plan3-badge': 'HIGH PERFORMANCE',
-    'plan1-desc': 'Para personas que buscan una planificación estructurada y seguimiento profesional.',
+    'pricing-sub': 'Planes mensuales sin permanencia. Cancelás cuando querés.',
+    'pricing-divider-text': 'Planes mensuales',
+    'entry-badge': 'Empezá aquí',
+    'entry-name': 'PUNTO DE PARTIDA',
+    'entry-period': 'pago único',
+    'entry-desc': 'El primer paso para conocer tu cuerpo y empezar con el pie derecho.',
+    'entry-f1': 'Evaluación funcional completa',
+    'entry-f2': 'Rutina de adaptación personalizada (3 semanas)',
+    'entry-f3': 'Análisis de objetivos y capacidades',
+    'entry-f4': 'Propuesta de planificación a largo plazo',
+    'entry-cta': 'Empezar ahora',
+    'entry-note': 'Al finalizar las 3 semanas podés continuar con un plan mensual',
+    'plan2-badge': 'PERFORMANCE', 'plan3-badge': 'HIGH PERFORMANCE',
     'plan2-desc': 'Mayor nivel de seguimiento y control para optimizar rendimiento y progresión.',
-    'plan3-desc': 'Para deportistas en desarrollo y atletas que buscan el mayor nivel de seguimiento, personalización y optimización continua.',
-    'plan1-f1': 'Evaluación inicial',
-    'plan1-f2': 'Planificación individualizada',
-    'plan1-f3': 'Seguimiento mensual',
-    'plan1-f4': 'Ajustes progresivos',
-    'plan1-f5': 'Orientación nutricional general',
-    'plan2-f1': 'Todo lo incluido en HEALTH',
+    'plan3-desc': 'Para deportistas y atletas que buscan el mayor nivel de personalización y optimización continua.',
+    'plan2-f1': 'Todo lo incluido en el Punto de Partida',
+    'plan2-f1b': 'Planificación mensual personalizada',
     'plan2-f2': 'Seguimiento semanal',
     'plan2-f3': 'Evaluaciones mensuales',
     'plan2-f4': 'Seguimiento nutricional',
     'plan2-f5': 'Análisis técnicos mediante videos',
     'plan3-f1': 'Todo lo incluido en Performance',
-    'plan3-f2': 'Coordinación de sesiones online en directo para seguimiento y feedback técnico',
+    'plan3-f2': 'Sesiones online en directo para seguimiento y feedback técnico',
     'plan3-f3': 'Ajustes individualizados constantes',
     'plan3-f4': 'Estrategia nutricional personalizada',
-    'pricing-cta': 'Empezar ahora', 'pricing-cta2': 'Empezar ahora', 'pricing-cta3': 'Empezar ahora',
-    'pricing-note': 'Completá el formulario primero',
+    'pricing-cta2': 'Empezar ahora', 'pricing-cta3': 'Empezar ahora',
     'pricing-note2': 'Completá el formulario primero',
     'pricing-note3': 'Completá el formulario primero',
     'popular-badge': 'Más elegido',
@@ -2128,27 +2187,32 @@ const translations = {
     // Pricing
     'pricing-eyebrow': 'Plans & Pricing',
     'pricing-title': 'CHOOSE YOUR<br><em>PLAN</em>',
-    'pricing-sub': 'Monthly subscription, no commitment. Cancel anytime.',
-    'plan1-badge': 'HEALTH', 'plan2-badge': 'PERFORMANCE', 'plan3-badge': 'HIGH PERFORMANCE',
-    'plan1-desc': 'For people looking for a structured plan and professional follow-up.',
+    'pricing-sub': 'Monthly plans, no commitment. Cancel anytime.',
+    'pricing-divider-text': 'Monthly plans',
+    'entry-badge': 'Start here',
+    'entry-name': 'STARTING POINT',
+    'entry-period': 'one-time payment',
+    'entry-desc': 'The first step to understand your body and start on the right foot.',
+    'entry-f1': 'Complete functional assessment',
+    'entry-f2': 'Personalized adaptation routine (3 weeks)',
+    'entry-f3': 'Goals and capabilities analysis',
+    'entry-f4': 'Long-term planning proposal',
+    'entry-cta': 'Start now',
+    'entry-note': 'After 3 weeks you can continue with a monthly plan',
+    'plan2-badge': 'PERFORMANCE', 'plan3-badge': 'HIGH PERFORMANCE',
     'plan2-desc': 'A higher level of monitoring and control to optimize performance and progression.',
-    'plan3-desc': 'For developing athletes seeking the highest level of monitoring, personalization and continuous optimization.',
-    'plan1-f1': 'Initial assessment',
-    'plan1-f2': 'Individualized planning',
-    'plan1-f3': 'Monthly follow-up',
-    'plan1-f4': 'Progressive adjustments',
-    'plan1-f5': 'General nutritional guidance',
-    'plan2-f1': 'Everything included in HEALTH',
+    'plan3-desc': 'For athletes seeking the highest level of personalization and continuous optimization.',
+    'plan2-f1': 'Everything included in Starting Point',
+    'plan2-f1b': 'Personalized monthly planning',
     'plan2-f2': 'Weekly follow-up',
     'plan2-f3': 'Monthly evaluations',
     'plan2-f4': 'Nutritional monitoring',
     'plan2-f5': 'Technical analysis via video',
     'plan3-f1': 'Everything included in Performance',
-    'plan3-f2': 'Live online session coordination for follow-up and technical feedback',
+    'plan3-f2': 'Live online sessions for follow-up and technical feedback',
     'plan3-f3': 'Constant individualized adjustments',
     'plan3-f4': 'Personalized nutritional strategy',
-    'pricing-cta': 'Start now', 'pricing-cta2': 'Start now', 'pricing-cta3': 'Start now',
-    'pricing-note': 'Complete the form first',
+    'pricing-cta2': 'Start now', 'pricing-cta3': 'Start now',
     'pricing-note2': 'Complete the form first',
     'pricing-note3': 'Complete the form first',
     'popular-badge': 'Most popular',
