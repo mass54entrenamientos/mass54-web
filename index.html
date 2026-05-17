@@ -1390,6 +1390,25 @@ footer {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+.entrenador-photo-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 38%; height: 100%;
+  background: linear-gradient(to right, #000000 30%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+.entrenador-photo-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, #000000 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 .entrenador-bottom-grid {
   display: grid;
