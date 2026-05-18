@@ -960,45 +960,54 @@ footer {
 }
 
 /* ─── FORM BUTTONS ─────────────────────────────── */
-.form-btn-es, .form-btn-en {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* ─── CONTACT FORM ──────────────────────────────── */
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+}
+.form-input, .form-select, .form-textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  padding: 14px 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
   width: 100%;
-  max-width: 520px;
-  padding: 20px 28px;
-  border-radius: 16px;
-  text-decoration: none;
-  transition: transform 0.25s, box-shadow 0.25s;
-  position: relative;
-  overflow: hidden;
 }
-.form-btn-es {
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(30,144,255,0.15);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--muted); opacity: 0.7; }
+.form-select { cursor: pointer; appearance: none; }
+.form-textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
   background: linear-gradient(135deg, #1E90FF 0%, #0060cc 100%);
-  color: white;
-  box-shadow: 0 8px 32px rgba(30,144,255,0.35);
-}
-.form-btn-en {
-  background: linear-gradient(135deg, #1a2540 0%, #0e1a30 100%);
-  color: white;
-  border: 1px solid rgba(30,144,255,0.4);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-.form-btn-es:hover, .form-btn-en:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 16px 40px rgba(30,144,255,0.45);
-}
-.form-btn-icon { font-size: 2rem; flex-shrink: 0; }
-.form-btn-text {
-  display: flex; flex-direction: column; text-align: left; flex: 1;
-}
-.form-btn-label {
+  color: white; border: none; border-radius: 100px;
   font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
-  font-size: 1.5rem; letter-spacing: 3px; line-height: 1;
+  font-size: 1.1rem; letter-spacing: 3px;
+  padding: 18px 52px; cursor: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 24px rgba(30,144,255,0.35);
+  margin-top: 8px; align-self: center;
 }
-.form-btn-sub {
-  font-size: 0.8rem; opacity: 0.8; margin-top: 4px; letter-spacing: 1px;
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(30,144,255,0.5); }
+.form-feedback {
+  text-align: center; padding: 16px; border-radius: 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem; letter-spacing: 1px;
 }
+.form-success { background: rgba(30,255,100,0.08); border: 1px solid rgba(30,255,100,0.3); color: #4dff8a; }
+.form-error   { background: rgba(255,60,60,0.08);  border: 1px solid rgba(255,60,60,0.3);  color: #ff6b6b; }
+@media (max-width: 768px) { .form-row-2 { grid-template-columns: 1fr; } }
 
 /* ─── INSTAGRAM CTA ─────────────────────────────── */
 .ig-cta-btn {
@@ -1904,7 +1913,7 @@ footer {
           <li data-t="entry-f3">Análisis de objetivos y capacidades</li>
           <li data-t="entry-f4">Propuesta de planificación a largo plazo</li>
         </ul>
-        <a href="#cta-band" class="pricing-btn" data-t="entry-cta">
+        <a href="#cta-band" class="pricing-btn" data-t="entry-cta" data-plan="Punto de Partida (€80)">
           Empezar ahora
         </a>
         <p class="pricing-entry-note" data-t="entry-note">Al finalizar las 3 semanas podés continuar con un plan mensual</p>
@@ -1935,7 +1944,7 @@ footer {
           <li data-t="plan2-f4">Seguimiento nutricional</li>
           <li data-t="plan2-f5">Análisis técnicos mediante videos</li>
         </ul>
-        <a href="#cta-band" class="pricing-btn pricing-btn-featured" data-t="pricing-cta2">
+        <a href="#cta-band" class="pricing-btn pricing-btn-featured" data-t="pricing-cta2" data-plan="Performance (€250/mes)">
           Empezar ahora
         </a>
         <p class="pricing-note" data-t="pricing-note2">Completá el formulario primero</p>
@@ -1955,7 +1964,7 @@ footer {
           <li data-t="plan3-f3">Ajustes individualizados constantes</li>
           <li data-t="plan3-f4">Estrategia nutricional personalizada</li>
         </ul>
-        <a href="#cta-band" class="pricing-btn" data-t="pricing-cta3">
+        <a href="#cta-band" class="pricing-btn" data-t="pricing-cta3" data-plan="High Performance (€390/mes)">
           Empezar ahora
         </a>
         <p class="pricing-note" data-t="pricing-note3">Completá el formulario primero</p>
@@ -1968,40 +1977,57 @@ footer {
 
 <!-- CTA BAND -->
 <section id="cta-band">
-  <div style="position:relative; z-index:2; max-width:800px; margin:0 auto; text-align:center;">
-    <div class="section-eyebrow" style="justify-content:center;" data-t="cta-eyebrow">Empezá ahora</div>
-    <h2 class="section-title" data-t="cta-title"><em>EMPEZÁ A CONSTRUIR</em><br>TU MEJOR VERSIÓN</h2>
-    <p style="color:var(--muted); max-width:520px; margin:0 auto 48px; line-height:1.7;" data-t="cta-sub">Completá tu evaluación inicial para comenzar un proceso adaptado a tus objetivos y necesidades.</p>
+  <div style="position:relative; z-index:2; max-width:700px; margin:0 auto;">
+    <div class="section-eyebrow" style="justify-content:center;" data-t="cta-eyebrow">Contacto</div>
+    <h2 class="section-title" style="text-align:center;" data-t="cta-title"><em>EMPEZÁ HOY</em></h2>
+    <p style="color:var(--muted); text-align:center; margin:0 auto 40px; line-height:1.7; max-width:480px;" data-t="cta-sub">Dejanos tus datos y te contactamos a la brevedad con toda la información para arrancar.</p>
 
-    <!-- FORM BUTTONS -->
-    <div style="display:flex; flex-direction:column; gap:16px; align-items:center; margin-bottom:28px;">
+    <form id="contactForm" class="contact-form">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="Nuevo interesado — MASS54">
+      <input type="hidden" name="botcheck" value="">
 
-      <a href="https://forms.gle/xj8dPutEG2JcpbCi6" target="_blank" class="form-btn-es">
-        <div class="form-btn-icon">🇪🇸</div>
-        <div class="form-btn-text">
-          <span class="form-btn-label" data-t="form-es-label">Formulario de Inicio</span>
-          <span class="form-btn-sub" data-t="form-es-sub">Completá tu evaluación en Español</span>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label" data-t="form-name-label">Nombre completo</label>
+          <input type="text" name="nombre" class="form-input" placeholder="Tu nombre" required data-t-ph="form-name-ph">
         </div>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-
-      <a href="https://forms.gle/ziZg1Xi6XQ5rrY2X7" target="_blank" class="form-btn-en">
-        <div class="form-btn-icon">🇬🇧</div>
-        <div class="form-btn-text">
-          <span class="form-btn-label" data-t="form-en-label">Start Form</span>
-          <span class="form-btn-sub" data-t="form-en-sub">Complete your assessment in English</span>
+        <div class="form-group">
+          <label class="form-label" data-t="form-email-label">Email</label>
+          <input type="email" name="email" class="form-input" placeholder="tu@email.com" required>
         </div>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" data-t="form-plan-label">Plan de interés</label>
+        <select name="plan" id="planSelect" class="form-select" required>
+          <option value="" data-t="form-plan-default">Seleccioná un plan</option>
+          <option value="Punto de Partida (€80)" data-t="form-plan1">Punto de Partida — €80</option>
+          <option value="Performance (€250/mes)" data-t="form-plan2">Performance — €250/mes</option>
+          <option value="High Performance (€390/mes)" data-t="form-plan3">High Performance — €390/mes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" data-t="form-msg-label">Mensaje (opcional)</label>
+        <textarea name="mensaje" class="form-textarea" placeholder="Contanos tu objetivo, experiencia, o cualquier consulta..." data-t-ph="form-msg-ph"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        <span data-t="form-submit">Enviar consulta</span>
+      </button>
+
+      <div id="formSuccess" class="form-feedback form-success" style="display:none;" data-t="form-success">✓ Mensaje recibido. Te contactamos pronto.</div>
+      <div id="formError"   class="form-feedback form-error"   style="display:none;" data-t="form-error">Hubo un error. Intentá de nuevo.</div>
+    </form>
+
+    <div style="text-align:center; margin-top:36px;">
+      <a href="https://www.instagram.com/mass54.entrenamientos?igsh=dzJhMzlqNGcyM2tt&utm_source=qr" target="_blank" class="ig-cta-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        <span data-t="ig-btn">Seguinos en Instagram · @mass54.entrenamientos</span>
       </a>
     </div>
-
-    <!-- INSTAGRAM BUTTON -->
-    <a href="https://www.instagram.com/mass54.entrenamientos?igsh=dzJhMzlqNGcyM2tt&utm_source=qr"
-       target="_blank" class="ig-cta-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      <span data-t="ig-btn">Seguinos en Instagram · @mass54.entrenamientos</span>
-    </a>
-
   </div>
 </section>
 
@@ -2373,6 +2399,47 @@ window.addEventListener('scroll', () => {
 
 // Also update translation for floating button
 const _origSetLang = typeof setLang !== 'undefined' ? setLang : null;
+</script>
+
+<script>
+// ── Plan pre-selection ──────────────────────────
+document.querySelectorAll('[data-plan]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const plan = btn.dataset.plan;
+    const select = document.getElementById('planSelect');
+    if (select && plan) select.value = plan;
+  });
+});
+
+// ── Contact form submission ─────────────────────
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.form-submit');
+  const success = document.getElementById('formSuccess');
+  const error   = document.getElementById('formError');
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+  success.style.display = 'none';
+  error.style.display   = 'none';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(this)
+    });
+    if (res.ok) {
+      success.style.display = 'block';
+      this.reset();
+    } else {
+      error.style.display = 'block';
+    }
+  } catch {
+    error.style.display = 'block';
+  }
+
+  btn.disabled = false;
+  btn.style.opacity = '1';
+});
 </script>
 
 </body>
