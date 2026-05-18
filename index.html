@@ -562,7 +562,7 @@ section { padding: 100px 5%; }
 }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 48px 64px;
 }
 .service-card {
@@ -575,9 +575,9 @@ section { padding: 100px 5%; }
 }
 .service-card:hover { border-top-color: var(--blue); }
 .service-card.full-center {
-  grid-column: 1 / -1;
-  max-width: calc(50% - 32px);
-  margin: 0 auto;
+  grid-column: auto;
+  max-width: 100%;
+  margin: 0;
   width: 100%;
 }
 .service-icon {
@@ -1910,7 +1910,7 @@ footer {
         <p data-t="srv2-desc">Planificaciones individualizadas enfocadas en mejorar fuerza, movilidad, composición corporal y hábitos sostenibles a largo plazo.</p>
       </div>
       <div class="service-card full-center reveal reveal-delay-2">
-        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:14px;" data-t="srv3-title">Seguimiento Nutricional</h3>
+        <h3 style="font-family:'Bebas Neue','Barlow Condensed',sans-serif;font-weight:400;font-size:1.8rem;text-transform:uppercase;letter-spacing:2px;text-align:left;margin-bottom:14px;" data-t="srv3-title">Seguimiento Nutricional</h3>
         <p data-t="srv3-desc">Estrategias nutricionales adaptadas a las necesidades y objetivos individuales para complementar el proceso de entrenamiento.</p>
       </div>
     </div>
