@@ -2171,11 +2171,20 @@ const translations = {
     'step4-title': 'Acompañar', 'step4-desc': 'Realizar seguimiento constante y ajustar el proceso según la evolución.',
     // Testimonios
     // CTA
-    'cta-eyebrow': 'Empezá ahora',
-    'cta-title': '<em>EMPEZÁ A CONSTRUIR</em><br>TU MEJOR VERSIÓN',
-    'cta-sub': 'Completá tu evaluación inicial para comenzar un proceso adaptado a tus objetivos y necesidades.',
-    'form-es-label': 'Formulario de Inicio', 'form-es-sub': 'Completá tu evaluación en Español',
-    'form-en-label': 'Start Form', 'form-en-sub': 'Complete your assessment in English',
+    'cta-eyebrow': 'Contacto',
+    'cta-title': '<em>EMPEZÁ HOY</em>',
+    'cta-sub': 'Dejanos tus datos y te contactamos a la brevedad con toda la información para arrancar.',
+    'form-name-label': 'Nombre completo', 'form-name-ph': 'Tu nombre',
+    'form-email-label': 'Email',
+    'form-plan-label': 'Plan de interés',
+    'form-plan-default': 'Seleccioná un plan',
+    'form-plan1': 'Punto de Partida — €80',
+    'form-plan2': 'Performance — €250/mes',
+    'form-plan3': 'High Performance — €390/mes',
+    'form-msg-label': 'Mensaje (opcional)', 'form-msg-ph': 'Contanos tu objetivo, experiencia, o cualquier consulta...',
+    'form-submit': 'Enviar consulta',
+    'form-success': '✓ Mensaje recibido. Te contactamos pronto.',
+    'form-error': 'Hubo un error. Intentá de nuevo.',
     'ig-btn': 'Seguinos en Instagram · @mass54.entrenamientos',
     'float-btn': 'Empezá hoy',
     // Footer
@@ -2279,11 +2288,20 @@ const translations = {
     'step4-title': 'Support', 'step4-desc': 'Provide constant follow-up and adjust the process according to progress.',
     // Testimonios
     // CTA
-    'cta-eyebrow': 'Start now',
-    'cta-title': '<em>START BUILDING</em><br>YOUR BEST VERSION',
-    'cta-sub': 'Complete your initial assessment to begin a process tailored to your goals and needs.',
-    'form-es-label': 'Formulario de Inicio', 'form-es-sub': 'Complete your assessment in Spanish',
-    'form-en-label': 'Start Form', 'form-en-sub': 'Complete your assessment in English',
+    'cta-eyebrow': 'Contact',
+    'cta-title': '<em>START TODAY</em>',
+    'cta-sub': 'Leave your details and we will get back to you shortly with all the information to get started.',
+    'form-name-label': 'Full name', 'form-name-ph': 'Your name',
+    'form-email-label': 'Email',
+    'form-plan-label': 'Plan of interest',
+    'form-plan-default': 'Select a plan',
+    'form-plan1': 'Starting Point — €80',
+    'form-plan2': 'Performance — €250/month',
+    'form-plan3': 'High Performance — €390/month',
+    'form-msg-label': 'Message (optional)', 'form-msg-ph': 'Tell us your goal, experience, or any questions...',
+    'form-submit': 'Send inquiry',
+    'form-success': '✓ Message received. We will contact you soon.',
+    'form-error': 'There was an error. Please try again.',
     'ig-btn': 'Follow us on Instagram · @mass54.entrenamientos',
     'float-btn': 'Start today',
     // Footer
@@ -2346,6 +2364,12 @@ function setLang(lang) {
     } else {
       el.textContent = t[key];
     }
+  });
+
+  // Placeholders (data-t-ph)
+  document.querySelectorAll('[data-t-ph]').forEach(el => {
+    const key = el.getAttribute('data-t-ph');
+    if (t[key]) el.placeholder = t[key];
   });
 
   // Hero esencia (no data-t, use class)
